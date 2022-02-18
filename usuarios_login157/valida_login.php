@@ -1,7 +1,7 @@
 
 
 <?php 
-    
+    echo"aaaaaa";
     require_once __DIR__."/config.php";  
 
     valida_login();
