@@ -2,12 +2,11 @@
 
 <?php 
 
-    echo"deus abençoe a america";
     require_once __DIR__."/config.php";  
 
     valida_login();
 
-    print_r($_SESSION['usuario']);
+    print_r($_SESSION['usuario']['id']);
   
 ?>
 
@@ -20,7 +19,7 @@
 
 </form>
 
-<form action="app/controllers/userController.php?action=update" method="POST">
+<form action="atualizar_usuario.php" method="POST">
 
 <input type="submit" value = "ATUALIZAR USUARIO">
 

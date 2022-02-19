@@ -70,15 +70,42 @@ class UserRepository {
     }
 
     function deletarUsuario($id){
-        $sql = "DELETE FROM `usuarios` WHERE `id`";
+        $sql = "DELETE FROM `usuarios` WHERE `id` = $id";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute();
 
-        echo "deletou";
     }
 
-    function atualizarUsuario(){
+    function updateUser($nameUpdated, $userUpdated, $passUpdated, $emailUpdated, $id){
 
+        if (!empty($nameUpdated)) {
+            $sql = "UPDATE `usuarios` SET `nome` =  '$nameUpdated'  WHERE `id`  = $id";
+
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();  
+        }
+
+        if (!empty($userUpdated)) {
+            $sql = "UPDATE `usuarios` SET `usuario` =  '$userUpdated'  WHERE `id`  = $id";;
+    
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();  
+        }
+
+        if (!empty($passUpdated)) {
+            $sql = "UPDATE `usuarios` SET `senha` =   sha1($passUpdated)  WHERE `id`  = $id";;
+    
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();  
+        }
+
+        if (!empty($emailUpdated)) {
+            $sql = "UPDATE `usuarios` SET `email` =  '$emailUpdated'  WHERE `id`  = $id";;
+    
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();  
+        }
+        
     }
 }

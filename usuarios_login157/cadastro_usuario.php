@@ -28,7 +28,7 @@
     
     <br />
     
-    <label for="field_usuario_cadastro">Crie um nome do usuário (*): </label>
+    <label for="field_usuario_cadastro">Crie um nome de usuário (*): </label>
     <input type="text" name="field_usuario_cadastro">
     
     <br />

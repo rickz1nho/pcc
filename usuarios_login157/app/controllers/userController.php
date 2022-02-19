@@ -60,7 +60,6 @@
 
             $_SESSION['msg'] = $e->getMessage();
 
-
                     header("location:" . BASE_URL . "/cadastro_usuario.php");
         }
 
@@ -68,46 +67,39 @@
     }
 
     function delete(){
+        
         $repository = new UserRepository();
 
         $repository->deletarUsuario($_SESSION['usuario']['id']);
+        header("location: " . BASE_URL ."/index.php");
+        
+        
     }
 
     function update(){
+        $nameUpdate  = $_POST['field_name_update'];
+        $userUpdate  = $_POST['field_user_update'];
+        $passUpdate  = $_POST['field_pass_update'];
+        $emailUpdate = $_POST['field_email_update'];
     
-       /* $nameCadastro  = $_POST[''];
-        $userCadastro  = $_POST[''];
-        $passCadastro  = $_POST[''];
-        $emailCadastro = $_POST[''];
-    
-        
-        //validacao
-        if (empty($userCadastro) OR empty($passCadastro) OR empty($nameCadastro) OR empty($emailCadastro)) {
-            # se usuario ou senha estiverem vazios
-            header("location: " . BASE_URL ."/cadastro_usuario.php?msg=existemcamposnulos");
-            exit; //nada eh executado daqui pra baixo...
-        }
     
 
         try {
             $repository = new UserRepository();  
 
-            $repository->verifyIfUserNameExists($userCadastro);
+            $repository->verifyIfUserNameExists($userUpdate);
 
-            $repository->criarUsuario($nameCadastro, $userCadastro, $passCadastro, $emailCadastro);
-
-            
+            $repository->updateUser($nameUpdate, $userUpdate, $passUpdate, $emailUpdate, $_SESSION['usuario']['id']);    
         
-            header("location:" . BASE_URL ."/index.php");
+            header("location:" . BASE_URL ."/valida_login.php");
 
         } catch (Exception $e) {
 
             $_SESSION['msg'] = $e->getMessage();
+            echo ("usuario já existe");
 
-
-                    header("location:" . BASE_URL . "/cadastro_usuario.php");
+                    header("location:" . BASE_URL . "/atualizar_usuario.php");
                   
         }
-        */  
-        echo "update";
+        
     }
