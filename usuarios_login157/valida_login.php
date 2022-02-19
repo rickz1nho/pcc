@@ -1,7 +1,8 @@
 
 
 <?php 
-    echo"aaaaaa";
+
+    echo"deus abençoe a america";
     require_once __DIR__."/config.php";  
 
     valida_login();
