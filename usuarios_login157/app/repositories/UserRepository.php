@@ -83,28 +83,32 @@ class UserRepository {
             $sql = "UPDATE `usuarios` SET `nome` =  '$nameUpdated'  WHERE `id`  = $id";
 
             $statement = $this->connection->prepare($sql);
-            $statement->execute();  
+            $statement->execute();
+            $_SESSION['usuario']['nome'] = $nameUpdated;
         }
 
         if (!empty($userUpdated)) {
             $sql = "UPDATE `usuarios` SET `usuario` =  '$userUpdated'  WHERE `id`  = $id";;
     
             $statement = $this->connection->prepare($sql);
-            $statement->execute();  
+            $statement->execute();
+            $_SESSION['usuario']['usuario'] = $userUpdated;  
         }
 
         if (!empty($passUpdated)) {
             $sql = "UPDATE `usuarios` SET `senha` =   sha1($passUpdated)  WHERE `id`  = $id";;
     
             $statement = $this->connection->prepare($sql);
-            $statement->execute();  
+            $statement->execute();
+            $_SESSION['usuario']['senha'] = $passUpdated;   
         }
 
         if (!empty($emailUpdated)) {
             $sql = "UPDATE `usuarios` SET `email` =  '$emailUpdated'  WHERE `id`  = $id";;
     
             $statement = $this->connection->prepare($sql);
-            $statement->execute();  
+            $statement->execute(); 
+            $_SESSION['usuario']['email'] = $emailUpdated;  
         }
         
     }
