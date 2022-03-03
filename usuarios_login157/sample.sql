@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE IF NOT EXISTS `usuarios_acl` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
       `nome` VARCHAR( 50 ) NOT NULL ,
       `usuario` VARCHAR( 25 ) NOT NULL ,
