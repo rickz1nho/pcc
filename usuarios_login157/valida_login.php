@@ -24,4 +24,10 @@
 
 </form>
 
+</form>
 
+<form action="app/controllers/logout.php" method="POST">
+
+<input type="submit" value="SAIR">
+
+</form>

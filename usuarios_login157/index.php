@@ -25,8 +25,6 @@
     <br>
 
     <a href="cadastro_usuario.php"> Caso não tenha uma conta - Cadastre-se</a>
-    <br />
-    <a href="logout.php"> Sair </a>
 
 </body>
 </html>
