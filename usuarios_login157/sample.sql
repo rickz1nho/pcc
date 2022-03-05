@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       KEY `nivel` (`nivel`)
   );
 
-  INSERT INTO usuarios (nome, usuario, senha, email, nivel, ativo) VALUES ('administrador', 'admin', 'admin', 'admin@admin', 4, 1);
+INSERT INTO usuarios (nome, usuario, senha, email, nivel, ativo) VALUES ('administrador', 'admin', SHA1('admin'), 'admin@admin', 4, 1);
