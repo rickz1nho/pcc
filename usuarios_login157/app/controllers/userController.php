@@ -14,6 +14,7 @@
 
         case 'delete':
             delete();
+            session_destroy();
             break;
 
 
