@@ -2,14 +2,19 @@
 
 <?php 
 
-    require_once __DIR__."/config.php";  
+require_once __DIR__."/config.php";  
 
-    valida_login();
+valida_login();
+if(valida_adm() == 1){
 
-    echo "Olá, " . $_SESSION['usuario']['nome'] . "<br>";
-    
+    echo "Olá, administrador " . $_SESSION['usuario']['nome'] . "<br>";
+
     echo "@" . $_SESSION['usuario']['usuario'];
-  
+}else{
+echo "Olá, " . $_SESSION['usuario']['nome'] . "<br>";
+
+echo "@" . $_SESSION['usuario']['usuario'];
+}
 ?>
 
 <form action="app/controllers/userController.php?action=delete" method="POST">

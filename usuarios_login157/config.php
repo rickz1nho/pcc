@@ -21,3 +21,9 @@
         }
         
     }
+    
+    function valida_adm(){
+        if($_SESSION[`usuario`] == `admin`){
+            return 1;
+        }
+    }
