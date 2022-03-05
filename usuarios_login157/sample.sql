@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       UNIQUE KEY `usuario` (`usuario`),
       KEY `nivel` (`nivel`)
   );
+
+  INSERT INTO usuarios (administrador, admin, admin, admin@admin.com, 4, 1);
