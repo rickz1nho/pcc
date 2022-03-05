@@ -11,7 +11,7 @@ if(valida_adm() == 1){
 
     echo "@" . $_SESSION['usuario']['usuario'];
 }else{
-echo "Olá, " . $_SESSION['usuario']['nome'] . "<br>";
+echo "Olá, usuario" . $_SESSION['usuario']['nome'] . "<br>";
 
 echo "@" . $_SESSION['usuario']['usuario'];
 }

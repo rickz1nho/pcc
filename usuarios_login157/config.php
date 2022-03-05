@@ -23,7 +23,7 @@
     }
     
     function valida_adm(){
-        if($_SESSION['usuario'] == "admin"){
+        if(!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel'] == 4){
             return 1;
         }
     }
