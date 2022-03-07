@@ -99,7 +99,7 @@
             $_SESSION['msg'] = $e->getMessage();
             echo ("usuario já existe");
 
-                    header("location:" . BASE_URL . "/atualizar_usuario.php");
+                    header("location:" . BASE_URL . "/valida_login.php");
                   
         }
         

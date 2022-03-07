@@ -16,12 +16,6 @@ echo "@" . $_SESSION['usuario']['usuario'];
 
 </form>
 
-<form action="app/controllers/userController.php?action=delete" method="POST">
-
-<input type="submit" value="DELETAR USUARIO">
-
-</form>
-
 <form action="atualizar_usuario.php" method="POST">
 
 <input type="submit" value = "ATUALIZAR USUARIO">
