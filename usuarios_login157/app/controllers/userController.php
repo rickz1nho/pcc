@@ -120,5 +120,5 @@
 
         $repository->promover($userBanco['usuario']['id']);
 
-        header("location:" . BASE_URL . "/valida_login.php?msg=usuáriopromovido");
+        header("location:" . BASE_URL . "/promover_usuario.php?msg=usuáriopromovido");
     }
