@@ -21,4 +21,4 @@
     //criou sessao do usuario
     $_SESSION['usuario'] = $usuario;
 
-    header("location: {$base_path}/valida_login.php");
+    header("location: {$base_path}/index.php");

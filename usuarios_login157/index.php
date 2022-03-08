@@ -21,11 +21,13 @@ if(valida_login() == 1){
 <h1>Home page</h1>
     <br>
     <br>
-    </form>
     <a href="login_page.php">Realizar login</a>
     <br>
     <br>
     <a href="cadastro_usuario.php">Cadastre-se</a>
+    <br>
+    <br>
+    <a href="valida_login.php">Meu perfil</a>
 
 </body>
 </html>

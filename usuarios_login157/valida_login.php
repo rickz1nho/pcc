@@ -37,3 +37,5 @@ echo "@" . $_SESSION['usuario']['usuario'];
 <input type="submit" value="SAIR">
 
 </form>
+
+<a href="index.php">Pagina inicial</a>

@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<?php
+
+    require_once __DIR__."/config.php";
+    valida_login();
+    if(valida_login()==1){
+        header("location: index.php?msg=vocejarealizoulogin");
+    }
+
+?>
+
+
     <form action="app/controllers/login_controller.php" method="POST">
     
 
