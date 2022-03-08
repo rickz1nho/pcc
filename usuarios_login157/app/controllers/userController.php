@@ -116,8 +116,6 @@
 
         $userId = $repository->getId($nome_promovido);
 
-        print_r($userId);
-
         $userBanco['usuario'] = $userId;
 
         $repository->promover($userBanco['usuario']['id']);
