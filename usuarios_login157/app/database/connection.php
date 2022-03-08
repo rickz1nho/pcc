@@ -8,7 +8,7 @@ class Connection {
         $db         = "usuarios_acl";
         $charset    = "utf8";
         $db_usuario = "root";
-        $db_senha   = "bancodedados"; #
+        $db_senha   = ""; #
 
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 

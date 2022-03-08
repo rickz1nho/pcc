@@ -10,12 +10,20 @@
 
     <?php 
     
-        session_start();
+        require_once __DIR__."/config.php"; 
 
 
         if (!empty($_SESSION['msg'])) {
             echo $_SESSION['msg'];
             $_SESSION['msg'] = null;
+        }
+
+        valida_login();
+        if(valida_nivel() != 1){
+
+            header("location: {$base_path}/valida_login?msg=sempermissao.php");
+            exit;
+        
         }
     
     ?>

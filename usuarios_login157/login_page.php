@@ -8,13 +8,6 @@
 </head>
 <body>
 
-    <?php
-
-    require_once __DIR__."/config.php";
-
-    valida_login();
-
-    ?>
     <form action="app/controllers/login_controller.php" method="POST">
     
 
