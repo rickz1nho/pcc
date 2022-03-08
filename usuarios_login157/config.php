@@ -18,7 +18,7 @@
         if(!isset($_SESSION['usuario']) || $_SESSION['usuario'] == null || $_SESSION['usuario'] == "") {
             header("location: login_page.php?");
             exit;
-        }
+        }else return 1;
         
     }
     
