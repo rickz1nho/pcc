@@ -5,9 +5,14 @@
 require_once __DIR__."/config.php";  
 
 valida_login();
-if(valida_adm() == 1){
+if(valida_nivel() == 1){
 
     header("location: {$base_path}/adm_page.php");
+    exit;
+
+}elseif(valida_nivel() == 2){
+    
+    header("location: {$base_path}/editor_page.php");
     exit;
 
 }else{

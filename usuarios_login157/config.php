@@ -22,8 +22,11 @@
         
     }
     
-    function valida_adm(){
-        if(!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel'] == 4){
+    function valida_nivel(){
+        if($_SESSION['usuario']['nivel'] == 4){
             return 1;
+        } elseif ($_SESSION['usuario']['nivel'] == 3){
+            return 2;
         }
     }
+    
