@@ -88,7 +88,7 @@ class UserRepository {
         }
 
         if (!empty($userUpdated)) {
-            $sql = "UPDATE `usuarios` SET `usuario` =  '$userUpdated'  WHERE `id`  = $id";;
+            $sql = "UPDATE `usuarios` SET `usuario` =  '$userUpdated'  WHERE `id`  = $id";
     
             $statement = $this->connection->prepare($sql);
             $statement->execute();
@@ -96,7 +96,7 @@ class UserRepository {
         }
 
         if (!empty($passUpdated)) {
-            $sql = "UPDATE `usuarios` SET `senha` =   sha1($passUpdated)  WHERE `id`  = $id";;
+            $sql = "UPDATE `usuarios` SET `senha` =   sha1($passUpdated)  WHERE `id`  = $id";
     
             $statement = $this->connection->prepare($sql);
             $statement->execute();
@@ -104,7 +104,7 @@ class UserRepository {
         }
 
         if (!empty($emailUpdated)) {
-            $sql = "UPDATE `usuarios` SET `email` =  '$emailUpdated'  WHERE `id`  = $id";;
+            $sql = "UPDATE `usuarios` SET `email` =  '$emailUpdated'  WHERE `id`  = $id";
     
             $statement = $this->connection->prepare($sql);
             $statement->execute(); 
@@ -112,4 +112,21 @@ class UserRepository {
         }
         
     }
+    
+    function promover($user_banco){
+        $sql = "UPDATE `usuarios` SET `nivel` =  '3'  WHERE `id`  = $user_banco";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
+
+    function getId(string $id){
+        $sql = "SELECT `id` FROM `usuarios` WHERE `usuario` = '$id'";
+    
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco;
+        }
+
 }

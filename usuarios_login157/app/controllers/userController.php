@@ -21,6 +21,10 @@
         case 'update':
             update();
             break;
+
+        case 'promove':
+            promove();
+            break;
         
         default:
             # code...
@@ -103,4 +107,18 @@
                   
         }
         
+    }
+
+    function promove(){
+        $nome_promovido = $_POST['field_name_promove'];
+
+        $repository = new UserRepository();
+
+        $userId = $repository->getId($nome_promovido);
+
+        print_r($userId);
+
+        $userBanco['usuario'] = $userId;
+
+        $repository->promover($userBanco['usuario']['id']);
     }
