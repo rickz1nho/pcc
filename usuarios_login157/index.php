@@ -8,23 +8,14 @@
 </head>
 <body>
 
-    <form action="app/controllers/login_controller.php" method="POST">
-    
-
-        <input placeholder="usuario" type="text" name="field_usuario">
-        
-        <br />
-
-        <input placeholder="senha" type="password" name="field_senha">
-        
-        <br />
-        <input type="submit">
-    
+<h1>Home page</h1>
+    <br>
+    <br>
     </form>
+    <a href="login_page.php">Realizar login</a>
     <br>
     <br>
-
-    <a href="cadastro_usuario.php"> Caso não tenha uma conta - Cadastre-se</a>
+    <a href="cadastro_usuario.php">Cadastre-se</a>
 
 </body>
 </html>
