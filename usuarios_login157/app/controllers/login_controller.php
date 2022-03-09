@@ -11,7 +11,7 @@
     //validacao
     if (empty($user) OR empty($pass) ) {
         # se usuario ou senha estiverem vazios
-        header("location: {$base_path}/index.php?msg=usuario ou senha vazios");
+        header("location: {$base_path}/login_page.php?msg=usuario ou senha vazios");
         exit; //nada eh executado daqui pra baixo...
     }
 
