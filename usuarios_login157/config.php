@@ -16,7 +16,7 @@
     function valida_login(){
             
         if(!isset($_SESSION['usuario']) || $_SESSION['usuario'] == null || $_SESSION['usuario'] == "") {
-            header("location: login_page.php?");
+            echo "sem permissão";
             exit;
         }else return 1;
         

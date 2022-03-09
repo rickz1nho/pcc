@@ -18,7 +18,7 @@ echo "@" . $_SESSION['usuario']['usuario'];
 
 <form action="atualizar_usuario.php" method="POST">
 
-<input type="submit" value = "ATUALIZAR USUARIO">
+<input type="submit" value = "ATUALIZAR DADOS">
 
 </form>
 

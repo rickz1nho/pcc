@@ -10,11 +10,13 @@
 
 <?php
 
-    require_once __DIR__."/config.php";
-    valida_login();
-    if(valida_login()==1){
-        header("location: index.php?msg=vocejarealizoulogin");
+
+require_once __DIR__."/config.php";
+    if(isset($_SESSION['usuario'])){
+    echo  "<script>alert('Você já está logado!');</script>";
+    header("location: {$base_path}/index.php?msg=talogadoja");
     }
+    
 
 ?>
 
@@ -36,6 +38,8 @@
     <br>
 
     <a href="cadastro_usuario.php"> Caso não tenha uma conta - Cadastre-se</a>
+
+
 
 </body>
 </html>

@@ -11,7 +11,7 @@
 <?php
 
 require_once __DIR__."/config.php";
-if(valida_login() == 1){
+if(isset($_SESSION['usuario'])){
     echo "Olá, " . $_SESSION['usuario']['nome'] . "<br>";
     echo "@" . $_SESSION['usuario']['usuario'];
 }

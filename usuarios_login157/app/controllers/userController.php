@@ -14,7 +14,7 @@
 
         case 'delete':
             delete();
-            session_destroy();
+            
             break;
 
 
@@ -77,6 +77,7 @@
 
         $repository->deletarUsuario($_SESSION['usuario']['id']);
         header("location: " . BASE_URL ."/index.php");
+        session_destroy();
         
         
     }
@@ -120,5 +121,7 @@
 
         $repository->promover($userBanco['usuario']['id']);
 
-        header("location:" . BASE_URL . "/promover_usuario.php?msg=usuáriopromovido");
+        echo  "<script>alert('Usuario promovido!');</script>";
+        header("location:" . BASE_URL . "/adm_page.php?");
+        
     }
