@@ -20,7 +20,6 @@ require_once __DIR__."/config.php";
 
 ?>
 
-
     <form action="app/controllers/login_controller.php" method="POST">
     
 
