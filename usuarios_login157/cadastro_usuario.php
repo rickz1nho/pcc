@@ -17,6 +17,12 @@
             echo $_SESSION['msg'];
             $_SESSION['msg'] = null;
         }
+
+        require_once __DIR__."/config.php";
+        if(isset($_SESSION['usuario'])){
+        echo  "<script>alert('Você já está logado!');</script>";
+        header("location: {$base_path}/index.php?msg=talogadoja");
+        }
     
     ?>
 
