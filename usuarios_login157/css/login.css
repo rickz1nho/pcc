@@ -31,7 +31,7 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%);
-    background: rgb(29, 25, 255)/*#CACACA */;
+    background: rgba(4, 0, 255, 0.555)/*#CACACA */;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(209, 209, 194, 0.589);
     border-radius: 10px;
@@ -56,11 +56,11 @@
   .login-box .user-box ::placeholder{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
     font-size: 20px;
-    color: #5b5959;
+    color: #ffffff;
   }
   
   .corpo{
-    background-image: url(https://i.pinimg.com/originals/3e/09/60/3e0960925c0d02aff13b72aacda9a26b.gif);
+    background-color: white;
   }
 
  .button {
@@ -82,10 +82,10 @@
    }
    
    .button:hover {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     box-shadow: black;
-    color: #fff;
-    
+    color: rgba(4, 0, 255, 0.555);
+    transform: scale(1.1);
    }
    
    .button:active {
