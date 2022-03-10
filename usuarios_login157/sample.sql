@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       `senha` VARCHAR( 40 ) NOT NULL ,
       `email` VARCHAR( 100 ) NOT NULL ,
       `nivel` INT(1) UNSIGNED NOT NULL DEFAULT '1',
-      `ativo` BOOL NOT NULL DEFAULT '1',
-      `cadastro` DATETIME NOT NULL ,
+      `cadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
       PRIMARY KEY (`id`),
       UNIQUE KEY `usuario` (`usuario`),
       KEY `nivel` (`nivel`)
