@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/login.css" />
     <title>Login do Usuário</title>
 </head>
-<body>
+<body class="corpo">
 
 <?php
 
@@ -31,11 +31,6 @@ require_once __DIR__."/config.php";
     </form>
 </div>
     <br>
-
-    <?php 
-
-    echo "<a> Recuperar Senha </a>";
-    ?>
     <br>
     <br>
  

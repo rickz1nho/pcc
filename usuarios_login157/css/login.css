@@ -31,10 +31,14 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%);
-    background: #CACACA;
+    background: rgb(29, 25, 255)/*#CACACA */;
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    box-shadow: 0 15px 25px rgba(209, 209, 194, 0.589);
     border-radius: 10px;
+  }
+
+  .corpo{
+    background-color: rgba(255, 255, 255, 0.945);
   }
 
   .login-box .user-box input {
