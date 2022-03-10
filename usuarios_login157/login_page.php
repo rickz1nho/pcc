@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/login.css" />
     <title>Login do Usuário</title>
 </head>
-<body>
+<body class="corpo">
 
 <?php
 
