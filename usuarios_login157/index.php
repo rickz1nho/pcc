@@ -24,24 +24,18 @@ if(isset($_SESSION['usuario'])){
 
 
     <?php
-    if(!isset($_SESSION['usuario']))
-     echo "<a href='login_page.php'>Realizar login</a>";
+    if(!isset($_SESSION['usuario'])){
+     echo "<a href='login_page.php'>Realizar login</a><br>
+     <br>" . "<a href='cadastro_usuario.php'>Cadastre-se</a>";
+    }
+    else{
+        echo "<a href='valida_login.php'>Meu perfil</a>";
+    }
     ?>
 
+    
     <br>
     <br>
-
-    <?php
-    if(!isset($_SESSION['usuario']))
-     echo "<a href='cadastro_usuario.php'>Cadastre-se</a>";
-    ?>
-    <br>
-    <br>
-
-    <?php
-    if(isset($_SESSION['usuario']))
-     echo "<a href='valida_login.php'>Meu perfil</a>";
-    ?>  
 
 </body>
 </html>
