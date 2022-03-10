@@ -26,7 +26,7 @@ class UserRepository {
 
         if($statement->rowCount() == 0){
           
-            header("location:{$this->base_path}/index.php?msg=usuario ou senha nao estao corretos");
+            header("location:{$this->base_path}/login_page.php?msg=usuario ou senha nao estao corretos");
             exit;
        
         } else {
