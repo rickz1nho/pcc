@@ -22,7 +22,7 @@ echo "@" . $_SESSION['usuario']['usuario'];
 
 <form action="app/controllers/userController.php?action=delete" method="POST">
 
-<input type="submit" value="DELETAR USUARIO">
+<input type="submit" value="DELETAR USUARIO" onclick="return confirm('Tem certeza que deseja deletar sua conta?')">
 
 </form>
 
