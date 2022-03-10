@@ -21,24 +21,24 @@
     ?>
 
 
-    <form action="app/controllers/userController.php?action=register" method="POST">
+    <form action="app/controllers/userController.php?action=update" method="POST">
 
-    <label for="field_nome_cadastro">Insira seu nome (*): </label>
-    <input type="text" name="field_nome_cadastro"> 
+    <label for="field_name_update">Insira seu nome (*): </label>
+    <input type="text" name="field_name_update"> 
     
     <br />
     
-    <label for="field_usuario_cadastro">Crie um nome de usuário (*): </label>
-    <input type="text" name="field_usuario_cadastro">
+    <label for="field_user_update">Crie um nome de usuário (*): </label>
+    <input type="text" name="field_user_update">
     
     <br />
 
-    <label for="field_senha_cadastro">Crie uma senha (*):</label>
-    <input type="password" name="field_senha_cadastro">
+    <label for="field_pass_update">Crie uma senha (*):</label>
+    <input type="password" name="field_pass_update">
     
     <br />
-    <label for="field_email_cadastro">Coloque seu email (*): </label>
-    <input type="text" name="field_email_cadastro">
+    <label for="field_email_update">Coloque seu email (*): </label>
+    <input type="text" name="field_email_update">
     
     <br />
 
