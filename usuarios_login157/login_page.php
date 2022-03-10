@@ -14,8 +14,7 @@
 
 require_once __DIR__."/config.php";
     if(isset($_SESSION['usuario'])){
-    echo  "<script>alert('Você já está logado!');</script>";
-    header("location: {$base_path}/index.php?msg=talogadoja");
+    header("location: {$base_path}/index.php?");
     }
     
 
@@ -31,6 +30,12 @@ require_once __DIR__."/config.php";
         <input class="button" type="submit" value="Confirmar">
     </form>
 </div>
+    <br>
+
+    <?php 
+
+    echo "<a> Recuperar Senha </a>";
+    ?>
     <br>
     <br>
  
