@@ -61,6 +61,9 @@
 
   .login-box .user-box :hover{
     transform: scale(1.1);
+  
+  .corpo{
+    background-color: white;
   }
 
 
@@ -88,6 +91,8 @@
     color: #fff;
     transform: scale(1.1);
 
+    color: rgba(4, 0, 255, 0.555);
+    transform: scale(1.1);
    }
    
    .button:active {
