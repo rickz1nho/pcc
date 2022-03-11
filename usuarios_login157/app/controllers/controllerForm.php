@@ -33,6 +33,12 @@
 
 
     function salvarPublicacao(){
-    }
+    
+        $texto = $_POST['editor_content'];
 
+        $repository = new UserRepository;
+
+        $repository->salvarPublicacao($texto);
+    
+    }
         ?>
