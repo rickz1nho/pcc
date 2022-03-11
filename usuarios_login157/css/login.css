@@ -31,10 +31,14 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%);
-    background: #CACACA;
+    background: rgba(4, 0, 255, 0.555)/*#CACACA */;
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    box-shadow: 0 15px 25px rgba(209, 209, 194, 0.589);
     border-radius: 10px;
+  }
+
+  .corpo{
+    background-color: rgba(255, 255, 255, 0.945);
   }
 
   .login-box .user-box input {
@@ -52,11 +56,17 @@
   .login-box .user-box ::placeholder{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
     font-size: 20px;
-    color: #5b5959;
+    color: #ffffff;
   }
+<<<<<<< HEAD
 
   .login-box .user-box :hover{
     transform: scale(1.1);
+=======
+  
+  .corpo{
+    background-color: white;
+>>>>>>> 99603cd45f0e788e49d12e8728d28532bab1324e
   }
 
 
@@ -79,11 +89,16 @@
    }
    
    .button:hover {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     box-shadow: black;
+<<<<<<< HEAD
     color: #fff;
     transform: scale(1.1);
 
+=======
+    color: rgba(4, 0, 255, 0.555);
+    transform: scale(1.1);
+>>>>>>> 99603cd45f0e788e49d12e8728d28532bab1324e
    }
    
    .button:active {
