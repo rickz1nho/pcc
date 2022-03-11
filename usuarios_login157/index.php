@@ -11,6 +11,7 @@
 <?php
 
 require_once __DIR__."/config.php";
+require_once __DIR__."/app/repositories/UserRepository.php";
 if(isset($_SESSION['usuario'])){
     echo "Olá, " . $_SESSION['usuario']['nome'] . "<br>";
     echo "@" . $_SESSION['usuario']['usuario'];
@@ -31,11 +32,16 @@ if(isset($_SESSION['usuario'])){
     else{
         echo "<a href='valida_login.php'>Meu perfil</a>";
     }
-    ?>
 
+    $repository = new UserRepository();
+    $repository->view();
+    ?>
     
+
     <br>
     <br>
+
+
 
 </body>
 </html>

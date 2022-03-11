@@ -137,4 +137,10 @@ class UserRepository {
 
     }
 
+    function view(){
+        $sql = "SELECT `conteudo` FROM `publicacao` WHERE `conteudo` = NOT NULL";
+        $statement = $this->connection->prepare($sql);
+        echo $statement->execute();
+    }
+
 }
