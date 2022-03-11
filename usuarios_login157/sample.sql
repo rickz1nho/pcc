@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       KEY `nivel` (`nivel`)
   );
 
-INSERT INTO usuarios (nome, usuario, senha, email) VALUES ('administrador', 'admin', SHA1('admin'), 'admin@admin', 4);
+INSERT INTO usuarios (nome, usuario, senha, email, nivel) VALUES ('administrador', 'admin', SHA1('admin'), 'admin@admin', 4);
 
 CREATE TABLE IF NOT EXISTS `publicacao` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
