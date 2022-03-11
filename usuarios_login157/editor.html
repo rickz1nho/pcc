@@ -24,8 +24,14 @@
       text-align: center;
     }
 
-    div#editor {
-      width: 81%;
+    div#myEditor {
+      width: 65%;
+      margin: auto;
+      text-align: left;
+    }
+
+    .myEditor{
+      width: 65%;
       margin: auto;
       text-align: left;
     }
@@ -66,13 +72,18 @@
   <script type="text/javascript" src="js/plugins/inline_style.min.js"></script>
   <script type="text/javascript" src="js/plugins/save.min.js"></script>
 
+  <div class="myEditor">
+  <form action="controllers/controllerForm.php?action=save" method="POST">
+    <textarea name="editor_content" id="myEditor"></textarea>
+  </div>
+    <button>Submit</button>
+  </form>
+  
+  
   <script>
-    (function () {
-      new FroalaEditor("#edit", {
-        fullPage: true
-      })
-    })()
+    new FroalaEditor('#myEditor', {toolbarInline: false})
   </script>
+  
 </body>
 
 </html>
