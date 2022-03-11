@@ -54,10 +54,11 @@
     font-size: 20px;
     color: #5b5959;
   }
-  
-  .corpo{
-    background-image: url(https://i.pinimg.com/originals/3e/09/60/3e0960925c0d02aff13b72aacda9a26b.gif);
+
+  .login-box .user-box :hover{
+    transform: scale(1.1);
   }
+
 
  .button {
     padding: 1.3em 3em;
@@ -81,7 +82,8 @@
     background-color: black;
     box-shadow: black;
     color: #fff;
-    
+    transform: scale(1.1);
+
    }
    
    .button:active {
