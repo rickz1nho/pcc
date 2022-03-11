@@ -80,8 +80,29 @@
   </form>
   
   
+
+  
   <script>
-    new FroalaEditor('#myEditor', {toolbarInline: false})
+    new FroalaEditor('#myEditor', {
+      // Set the image upload parameter.
+      imageUploadParam: 'image_param',
+  
+      // Set the image upload URL.
+      imageUploadURL: '/img',
+  
+      // Additional upload params.
+      imageUploadParams: {id: 'my_editor'},
+  
+      // Set request type.
+      imageUploadMethod: 'POST',
+  
+      // Set max image size to 5MB.
+      imageMaxSize: 5 * 1024 * 1024,
+  
+      // Allow to upload PNG and JPG.
+      imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+  
+    })
   </script>
   
 </body>

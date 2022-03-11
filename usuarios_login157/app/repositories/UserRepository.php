@@ -138,9 +138,13 @@ class UserRepository {
     }
 
     function view(){
-        $sql = "SELECT `conteudo` FROM `publicacao` WHERE `conteudo` = NOT NULL";
+        $sql = "SELECT `conteudo` FROM `publicacao` WHERE `id` = 1";
         $statement = $this->connection->prepare($sql);
-        echo $statement->execute();
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        $conteudoTexto['texto'] = $conteudo;
+        echo $conteudoTexto['texto']['conteudo'];
+        
     }
 
 }
