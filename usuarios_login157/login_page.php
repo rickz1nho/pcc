@@ -31,11 +31,6 @@ require_once __DIR__."/config.php";
     </form>
 </div>
     <br>
-
-    <?php 
-
-    echo "<a> Recuperar Senha </a>";
-    ?>
     <br>
     <br>
  
