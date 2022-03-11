@@ -9,10 +9,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       `twitch` VARCHAR(50) NOT NULL,
       PRIMARY KEY (`id`),
       UNIQUE KEY `usuario` (`usuario`),
-      KEY `nivel` (`nivel`)
-  );
+      KEY `nivel` (`nivel`));
 
-INSERT INTO usuarios (nome, usuario, senha, email) VALUES ('administrador', 'admin', SHA1('admin'), 'admin@admin', 4);
+INSERT INTO usuarios (nome, usuario, senha, email, nivel) VALUES ('administrador', 'admin', SHA1('admin'), 'admin@admin', 4));
 
 CREATE TABLE IF NOT EXISTS `publicacao` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -21,5 +20,4 @@ CREATE TABLE IF NOT EXISTS `publicacao` (
       `autor` VARCHAR(26) NOT NULL,
       `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
       `conteudo` text NOT NULL,
-      PRIMARY KEY (`id`),
-);
+      PRIMARY KEY (`id`));

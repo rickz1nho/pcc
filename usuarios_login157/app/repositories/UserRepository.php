@@ -128,5 +128,12 @@ class UserRepository {
         $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
         return $usuario_do_banco;
         }
+    
+    function salvarPublicacao($text){
 
+        $sql = "INSERT INTO `publicacao` (`conteudo`) VALUES (' ". $text . " ')";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+
+    }
 }
