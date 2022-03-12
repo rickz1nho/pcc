@@ -134,7 +134,7 @@ class UserRepository {
         $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`) VALUES (' ". $text ." ', ' ". $autor ."')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
-        header("location: {$this->base_path}index.php?msg=publicacaocriada");
+        header("location: {$this->base_path}/index.php?msg=publicacaocriada");
 
     }
 
