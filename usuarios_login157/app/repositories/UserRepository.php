@@ -139,7 +139,7 @@ class UserRepository {
     }
 
     function view(){
-        $sql = "SELECT `conteudo`,MAX(`postagem`) FROM `publicacao` ORDER BY `postagem`";
+        $sql = "SELECT `conteudo`,MAX(`postagem`) FROM `publicacao`";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
