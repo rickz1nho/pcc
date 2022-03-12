@@ -129,9 +129,9 @@ class UserRepository {
         return $usuario_do_banco;
         }
     
-    function salvarPublicacao($text){
+    function salvarPublicacao($text, $autor){
 
-        $sql = "INSERT INTO `publicacao` (`conteudo`) VALUES (' ". $text . " ')";
+        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`) VALUES (' ". $text ." ', ' ". $autor ."')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
 

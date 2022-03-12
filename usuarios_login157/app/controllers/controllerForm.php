@@ -38,7 +38,7 @@
 
         $repository = new UserRepository;
 
-        $repository->salvarPublicacao($texto);
+        $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario']);
     
     }
         ?>
