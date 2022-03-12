@@ -48,9 +48,9 @@
 
         $id = $repository->getPubliId();
 
-        $publiId ['publi'] = $id;
+        $publiId['publi'] = $id;
 
-        $repository->deletePubli($id['publi']['id']);
+        $repository->deletePubli($publiId['publi']['id']);
 
     }
         ?>

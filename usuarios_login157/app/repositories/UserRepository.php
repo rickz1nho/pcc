@@ -153,8 +153,7 @@ class UserRepository {
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
-        $id['publi'] = $conteudo;
-        return $id['publi']['id'];
+        return $conteudo;       
         
     }
 
