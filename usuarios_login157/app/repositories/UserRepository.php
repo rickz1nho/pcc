@@ -148,4 +148,20 @@ class UserRepository {
         
     }
 
+    function getPubliId(){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        $id['publi'] = $conteudo;
+        return $id['publi']['id'];
+        
+    }
+
+    function deletePubli($id){
+        $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
+
 }

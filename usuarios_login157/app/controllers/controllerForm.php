@@ -41,4 +41,17 @@
         $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario']);
     
     }
+
+    function delete(){
+
+        $repository = new UserRepository;
+
+        $id = $repository->getPubliId();
+
+        $publiId ['publi'] = $id;
+
+        $repository->deletePubli($id['publi']['id']);
+
+    }
         ?>
+

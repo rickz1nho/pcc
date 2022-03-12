@@ -49,6 +49,9 @@
                 <div class="col">
                     <a class="btn btn-default" href='valida_login.php'>Meu perfil</a>
                 </div>
+            
+    <form action="app/controllers/controllerForm.php?action=delete" method="POST">
+
             <?php
             }
 
@@ -57,6 +60,10 @@
 
 
             ?>
+
+<input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm('Tem certeza que deseja deletar essa publicacao?')">
+
+</form>
 
         </div>
     </div>
