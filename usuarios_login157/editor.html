@@ -40,7 +40,7 @@
 
 <body>
   <div id="editor">
-    <div id='edit' style="margin-top: 30px;">
+    <div id='edit' style="margin-top: 90px;">
     </div>
   </div>
 
@@ -79,30 +79,17 @@
     <button>Submit</button>
   </form>
   
-  
-
-  
   <script>
     new FroalaEditor('#myEditor', {
-      // Set the image upload parameter.
-      imageUploadParam: 'image_param',
-  
       // Set the image upload URL.
-      imageUploadURL: '/img',
-  
-      // Additional upload params.
-      imageUploadParams: {id: 'my_editor'},
-  
-      // Set request type.
+      imageUploadParam: 'image_param',
       imageUploadMethod: 'POST',
-  
-      // Set max image size to 5MB.
-      imageMaxSize: 5 * 1024 * 1024,
-  
-      // Allow to upload PNG and JPG.
+      hight:200,
+      imageUploadURL: 'upload_image.php',
       imageAllowedTypes: ['jpeg', 'jpg', 'png'],
-  
+      imageUploadParams: {Froala:true},
     })
+    
   </script>
   
 </body>
