@@ -23,7 +23,7 @@ var cccTheme = {
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.async = true;
-    var theUrl = baseUrl + 'serve/v3/coin/header?fsyms=BTC,SLP,ETH,DOGE,ADA,SOL&tsyms=USD,BRL';
+    var theUrl = baseUrl + 'serve/v3/coin/header?fsyms=BTC,SLP,ETH,DOGE,ADA,SOL&tsyms=BRL,USD';
     s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
     embedder.parentNode.appendChild(s);
 })();
