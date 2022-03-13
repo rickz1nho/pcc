@@ -8,9 +8,9 @@ error_reporting(E_ALL);
 
 session_start();
 
-$base_path = "http://localhost/pcc-1/usuarios_login157";
+$base_path = "http://localhost/pcc/usuarios_login157";
 
-define("BASE_URL", "http://localhost/pcc-1/usuarios_login157");
+define("BASE_URL", "http://localhost/pcc/usuarios_login157");
 
 
 function valida_login()
