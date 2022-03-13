@@ -58,8 +58,6 @@
             <?php } ?>
 
 
-
-
             <?php
             if (!isset($_SESSION['usuario'])) {
             ?>
@@ -74,21 +72,21 @@
                 <div class="col">
                     <a class="btn btn-default" href='valida_login.php'>Meu perfil</a>
                 </div>
-            
-    <form action="app/controllers/controllerForm.php?action=delete" method="POST">
 
-            <?php
+                <form action="app/controllers/controllerForm.php?action=delete" method="POST">
+
+                <?php
             }
 
             $repository = new UserRepository();
             $repository->view();
 
 
-            ?>
+                ?>
 
-<input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm('Tem certeza que deseja deletar essa publicacao?')">
+                <input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm('Tem certeza que deseja deletar essa publicacao?')">
 
-</form>
+                </form>
 
         </div>
     </div>
