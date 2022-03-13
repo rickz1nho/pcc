@@ -132,10 +132,10 @@ class UserRepository
         return $usuario_do_banco;
     }
 
-    function salvarPublicacao($text, $autor)
+    function salvarPublicacao($text, $autor, $titulo, $categoria)
     {
 
-        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`) VALUES (' " . $text . " ', ' " . $autor . "')";
+        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         header("location: {$this->base_path}/index.php?msg=publicacaocriada");
@@ -149,5 +149,20 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         $conteudoTexto['texto'] = $conteudo;
         echo $conteudoTexto['texto']['conteudo'];
+    }
+
+    function getPubliId(){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo;
+
+    }
+
+    function deletePubli($id){
+        $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
     }
 }

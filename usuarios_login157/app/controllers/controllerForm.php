@@ -35,10 +35,12 @@
     function salvarPublicacao(){
     
         $texto = $_POST['editor_content'];
+        $titulo = $_POST['titulo'];
+        $categoria = $_POST['str'];
 
         $repository = new UserRepository;
 
-        $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario']);
+        $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario'], $titulo, $categoria);
     
     }
 
